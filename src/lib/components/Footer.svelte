@@ -57,7 +57,9 @@
 		</ul>
 	</div>
 	<div class="text-base border-t-body border-t border-solid p-[35px_0] text-center">
-		<div class="container"><span class="text-sm">&#9400;</span> 2024. All Right reserved</div>
+		<div class="container">
+			<span class="text-sm">&#9400;</span>OctaHat 2024. All Right reserved
+		</div>
 	</div>
 </footer>
 
