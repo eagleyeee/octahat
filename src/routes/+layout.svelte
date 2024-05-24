@@ -34,7 +34,7 @@
 	<title>Octahat - Innovate, Elevate and Fortify Digital Frontiers</title>
 </svelte:head>
 
-<svelte:body use:classList={'!scroll-smooth'} />
+<svelte:body use:classList={'!scroll-smooth !overscroll-none'} />
 <!--<Cursor />-->
 
 <!--<Header {logoDark} {logoWhite} onToggleDarkMode={() => (isDark = !isDark)} />-->

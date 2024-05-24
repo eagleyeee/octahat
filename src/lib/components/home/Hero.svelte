@@ -3,9 +3,15 @@
 	import heroTextBanner from '$lib/assets/images/creative.png';
 
 	let y;
-</script>
 
-<svelte:window bind:scrollY={y} />
+	import gsap from 'gsap';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		const t1 = gsap.timeline({ defaults: { ease: Power2.easeInOut } });
+		t1.fromTo('h1', { scale: 0.5 }, { scale: 1, opacity: 1, duration: 1.4 });
+	});
+</script>
 
 <section>
 	<div class="relative min-h-[100vh] bg-banner dark:bg-darkbanner z-10 overflow-hidden">
@@ -20,7 +26,7 @@
 			<div class="absolute uppercase py-[225px] px-0 z-[12]">
 				<div class="inline-block mb-5">
 					<h6
-						class="mb-0 text-accent border-b-2 border-accent normal-case leading-[27px] transition-all duration-[0.5s] ease-in-out {y >
+						class="mb-0 text-accent border-b-2 border-accent normal-case drop-shadow-2xl leading-[27px] transition-all duration-[0.5s] delay-150 ease-in-out {y >
 						150
 							? '-translate-y-full scale-0'
 							: 'translate-y-0 sacale-100'}"
@@ -29,16 +35,17 @@
 					</h6>
 				</div>
 				<div class="inline-block">
-					<h1
-						class="flex flex-wrap gap-4 font-[900] text-6xl leading-[72px] normal-case w-[75%] text-primary dark:text-white transition-all duration-[0.5s] ease-in-out"
+					<!--<h1
+						class="flex flex-wrap gap-4 drop-shadow-2xl font-[900] text-6xl leading-[72px] normal-case w-[75%] text-primary dark:text-white transition-all duration-[0.5s] ease-in-out"
 					>
 						<span
-							class="relative inline-block transition-all duration-[0.5s] ease-in-out {y > 200
+							class="relative inline-block transition-all duration-[0.5s] delay-150 ease-in-out {y >
+							200
 								? '-translate-x-full scale-0'
 								: 'translate-x-0 sacale-100'}">Startup Sprint</span
 						>
 						<img
-							class="h-[62px] rounded-full overflow-hidden transition-all duration-[0.5s] ease-in-out {y >
+							class="h-[62px] rounded-full overflow-hidden drop-shadow-2xl transition-all duration-[0.5s] delay-150 ease-in-out {y >
 							200
 								? 'scale-0'
 								: 'sacale-100'}"
@@ -47,27 +54,46 @@
 						/>
 
 						<span
-							class="relative inline-block transition-all duration-[0.5s] ease-in-out {y > 275
+							class="relative inline-block transition-all duration-[0.5s] delay-150 ease-in-out {y >
+							275
 								? '-translate-x-full scale-0'
 								: 'translate-x-0 sacale-100'}"
 							>Accelerating & Fortifying
 						</span>
 						<span
-							class="relative inline-block transition-all duration-[0.5s] ease-in-out {y > 350
+							class="relative inline-block transition-all duration-[0.5s] delay-150 ease-in-out {y >
+							350
 								? '-translate-x-full scale-0'
 								: 'translate-x-0 sacale-100'}">your Cyberspace</span
+						>
+					</h1>-->
+					<h1
+						class="flex flex-wrap gap-4 drop-shadow-2xl font-[900] text-6xl leading-[72px] normal-case w-[75%] text-primary dark:text-white transition-all duration-[0.5s] ease-in-out"
+					>
+						<span class="relative inline-block transition-all duration-[0.5s] delay-150 ease-in-out"
+							>Startup Sprint</span
+						>
+						<img
+							class="h-[62px] rounded-full overflow-hidden drop-shadow-2xl transition-all duration-[0.5s] delay-150 ease-in-out"
+							src={heroTextBanner}
+							alt=""
+						/>
+
+						<span class="relative inline-block transition-all duration-[0.5s] delay-150 ease-in-out"
+							>Accelerating & Fortifying
+						</span>
+						<span class="relative inline-block transition-all duration-[0.5s] delay-150 ease-in-out"
+							>your Cyberspace</span
 						>
 					</h1>
 				</div>
 			</div>
 			<a
 				href="/#next"
-				class="absolute top-[600px] {y > 375
-					? 'translate-y-full scale-0'
-					: 'translate-y-0 sacale-100'}"
+				class="absolute top-[600px] transition-all duration-[0.5s] delay-150 ease-in-out"
 			>
 				<span
-					class="text-primary dark:text-white text-[42px] icon-[ic--round-keyboard-double-arrow-down] cursor-pointer transition-all duration-[0.5s] ease-in-out animate-bounce"
+					class="text-primary dark:text-white text-[42px] icon-[ic--round-keyboard-double-arrow-down] cursor-pointer transition-all duration-[0.5s] delay-150 ease-in-out animate-bounce"
 				></span>
 			</a>
 		</div>

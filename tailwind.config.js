@@ -23,14 +23,25 @@ export default {
 			backgroundImage: {
 				'banner-image': "url('/src/lib/assets/images/creative-banner-2.png')"
 			},
-			animation: {
-				'infinite-scroll': 'infinite-scroll 20s linear infinite'
-			},
+
 			keyframes: {
-				'infinite-scroll': {
-					from: { transform: 'translateX(0)' },
-					to: { transform: 'translateX(-100%)' }
+				slideleft: {
+					'0%': {
+						transform: 'translateX(0%)'
+					},
+					'100%': {
+						transform: 'translateX(-100%)'
+					}
+				},
+				wave: {
+					'100%': {
+						width: '100%'
+					}
 				}
+			},
+			animation: {
+				slideleft: 'slideleft 20s linear infinite',
+				wave: 'wave 1s ease-in infinite'
 			}
 		},
 		screens: {
