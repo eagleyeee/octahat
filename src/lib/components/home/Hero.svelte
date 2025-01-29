@@ -49,7 +49,7 @@
 			<div class="relative inset-0 z-40 px-0 py-40 uppercase 2xl:py-56">
 				<div class="mb-5 inline-block">
 					<h6
-						class="mb-0 border-b-2 border-accent font-kanit font-normal normal-case leading-[27px] text-accent drop-shadow-xl transition-all duration-[0.3s] ease-in-out dark:text-accent {y >
+						class="mb-0 border-b-2 border-accent font-kanit font-medium normal-case leading-[27px] text-accent drop-shadow-xl transition-all duration-[0.3s] ease-in-out dark:text-accent {y >
 						150
 							? '-translate-y-full scale-0'
 							: 'sacale-100 translate-y-0'}"
